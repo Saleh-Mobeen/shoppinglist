@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+
+</head>
+
+<body>
+
+    <header id="header">
+        <button class="p-btn" onclick="addOn()">Add</button>
+        <h1>Shopping List</h1>
+        <button class="n-btn" onclick="clearall()">Clear all</button>
+
+    </header>
+
+
+    <section id="main">
+
+
+
+    </section>
+
+
+    <section class="add">
+        <button onclick="addOff()">Close</button>
+        <form id="addf">
+            <input type="text" placeholder="item" list="options">
+            <button type="submit">Add</button>
+        </form>
+    </section>
+
+    <datalist id="options">
+        <option value="Ghee"></option>
+        <option value="Oil"></option>
+        <option value="Sugar"></option>
+        <option value="Soap"></option>
+        <option value="Shampoo"></option>
+        <option value="Toothpaste"></option>
+        <option value="Tea / Patti"></option>
+        <option value="Ketchup"></option>
+        <option value="Biscuit"></option>
+        <option value="Rice"></option>
+        <option value="Macaroni"></option>
+        <option value="Spaghetti"></option>
+        <option value="Surf"></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+    </datalist>
+
+    <script src="index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+
+
+</body>
+
+</html>
