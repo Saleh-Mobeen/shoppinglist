@@ -11,5 +11,12 @@
             "sizes": "192x192",
             "type": "image/png"
         }
+    ],
+    "screenshots": [
+        {
+            "src": "./screenshot.png",
+            "sizes": "320x320",
+            "type": "image/png"
+        }
     ]
 }
